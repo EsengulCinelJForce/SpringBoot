@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
   <link rel="stylesheet" th:href="@{/css/style.css}">
+
+
+  <link rel="stylesheet" th:href="@{css/style.css}">    <!-- css'den gelen -->
 </head>
 <body class="container">
 <!--start codes-->
@@ -16,7 +19,9 @@
 <hr>
 
 <p  th:text="${key_model}"></p>  <!--Controller içine yazdıgımız modelden geleni almak için şu şekilde yazdık -->
+        <!-- $ işaretini text yapıları için kullandık -->
 
+<a href="" class="thymeleaf2" >Click me </a>
 <!--ends codes-->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
 <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
