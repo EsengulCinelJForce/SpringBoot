@@ -47,10 +47,13 @@ public class ThymeLeafController {
 
 
     //RequestParam
-    //http://localhost:8080/thymeleaf4?id=5
+    //http://localhost:8080/thymeleaf4?id=4
                                         //id, name vs ne varsa burada sıra önemsiz gönderebiliriz.
+                                        //false olursa yukarıdaki id kısmını boş şekilde de gönderebiliriz. id= gibi ama
+                                        //required =true olursa kesinlikle bir şey gitmeli ve
+                                        //ekranda istediğin şekilde farklı değerlerde gönderebilirsin
     @GetMapping("/thymeleaf4")
-    public String getThymeLeaf4Model(Model model, @RequestParam(name = "id") Long id) {
+    public String getThymeLeaf4Model(Model model, @RequestParam(name = "id",required = false) Long id) {
         model.addAttribute("key_model", "id : " + id);
         return "thymeleaf4";
     }
