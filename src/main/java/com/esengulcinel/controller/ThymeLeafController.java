@@ -4,6 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller                                  //bir birimin controller olabilmesi için bu annotaion kesin olmalı
@@ -39,9 +40,20 @@ public class ThymeLeafController {
 
     //http://localhost:8080/thymeleaf3
     @GetMapping("/thymeleaf3/{id}")
-    public String getThymeLeaf3Model(Model model, @PathVariable(name = "id") Long id ) {
-        model.addAttribute("key_model", "id : " +id);
+    public String getThymeLeaf3Model(Model model, @PathVariable(name = "id") Long id) {
+        model.addAttribute("key_model", "id : " + id);
         return "thymeleaf3";
     }
+
+
+    //RequestParam
+    //http://localhost:8080/thymeleaf4?id=5
+                                        //id, name vs ne varsa burada sıra önemsiz gönderebiliriz.
+    @GetMapping("/thymeleaf4")
+    public String getThymeLeaf4Model(Model model, @RequestParam(name = "id") Long id) {
+        model.addAttribute("key_model", "id : " + id);
+        return "thymeleaf4";
+    }
+
 
 }
