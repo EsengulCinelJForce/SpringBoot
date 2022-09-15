@@ -8,6 +8,9 @@ import org.springframework.context.annotation.ComponentScan;
         org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration.class,
         org.springframework.boot.actuate.autoconfigure.security.servlet.ManagementWebSecurityAutoConfiguration.class}
 )
+
+
+
 @ComponentScan("com.esengulcinel")   //used to specify base packages
 public class Application {
 
